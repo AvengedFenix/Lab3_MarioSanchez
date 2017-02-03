@@ -71,21 +71,22 @@ void menu(int men){
 				int temp = (size/2)-1;
 				int cont = 0;
 				
-				for(int i = 0; i < (size/2)-1; i++){
+				for(int i = 0; i < (size/2); i++){
 					if(arre1[i] == "{"){
 						if(arre2[temp] == "}"){
 							cont++;
 						}
-
+						temp--;
 					}else if(arre1[i] == "("){
 						if(arre2[temp] == ")"){
 							cont++;
 						}
-		
+						temp--;
 					}else if(arre1[i] == "["){
 						if(arre2[temp] == "]"){
 							cont++;
-						}		
+						}
+						temp--;		
 					}
 				}
 				if(cont == size/2){
